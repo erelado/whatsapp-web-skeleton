@@ -8,6 +8,8 @@ Serves as a companion style for [Dark WhatsApp](https://github.com/vednoc/dark-w
 <a href='https://github.com/E-RELevant/whatsapp-web-skeleton/wiki'><img src='https://img.shields.io/badge/docs-on%20GitHub-007ec6.svg?&style=flat' /></a>
 <a href='https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/wa-sk.user.styl'><img src='https://img.shields.io/badge/Install%20directly%20with-Stylus-006666.svg?longCache=true&style=flat' /></a>
 
+![preview](https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/images/preview.png)
+
 ## Features
 - Toggle on/off skeleton mode
   - Hides the main chat area, right and left drawers.
