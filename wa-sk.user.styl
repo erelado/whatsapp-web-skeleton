@@ -1,0 +1,185 @@
+/* ==UserStyle==
+@name         Dark-WhatsApp Skeleton
+@description  Shows a skeleton screen which is a version of the UI that mimics the page's layout by showing its elements in a shape similar to the actual content.
+@namespace    Screenshot-mode
+@author       vednoc     <vednoc@pm.me> (https://github.com/vednoc)
+@author       E-RELevant                (https://github.com/E-RELevant)
+@version      1.0.0
+@license      MIT
+@preprocessor stylus
+
+@var checkbox sk_mode    'Skeleton mode' 0
+@var color    bg_color   'Skeleton background color' #d9d9d9
+@var checkbox timestamps 'Hide timestamps' 1
+@var checkbox rtl_header 'RTL: Remove empty message header' 1
+
+==/UserStyle== */
+
+// Color mixin.
+/// All colors: `c: fg1 bg5 bg1`
+/// Only border-color: `c: 0 bg5`
+c(x, y = 0, z = 0, xi = 1, yi = 1, zi = 1) {
+    if x != 0 && x != '_' {            color: xi is 0 ? x : x i }
+    if y != 0 && y != '_' {     border-color: yi is 0 ? y : y i }
+    if z != 0 && z != '_' { background-color: zi is 0 ? z : z i }
+}
+
+// Rounded corners mixin.
+rad() { border-radius: arguments }
+
+@-moz-document domain('web.whatsapp.com') {
+    #stylus-fix { content: 'true' }
+    if (sk_mode) {
+        sk = lighten(bg_color, 8%)
+        t  = transparent
+        i  = !important
+        
+        html[class][dir]:not(x):not(y):not(z) > body[class] > #app {
+            /// Hide avatars.
+            [style *= 'height'][style *= 'width'] > img[src] { opacity: 0 i }
+                
+            /// Left pane.
+            #side {
+                /// Titles.
+                [title]:not([role = 'button']) {
+                    rad: 4px i
+                    c: t 0 sk
+                }
+                /// Content.
+                span > span[dir] {
+                    rad: 4px i
+                    c: t 0 sk
+                }
+                /// Selected chat.
+                [aria-selected = 'true'] {
+                    span > span[dir] {
+                        rad: 4px i
+                        c: t 0 sk
+                    }
+                }
+                
+                /// Timestamps.
+                if (timestamps) {
+                    ._3dtfX > .m61XR {
+                        max-width: 30px
+                        rad: 4px i
+                        c: t 0 sk
+                    }
+                }
+                /// Hide emojis and icons.
+                /// not: [1] default avatars for contacts, groups, broadcasts. [2] 'down' arrow menu icons.
+                .emoji,
+                #pane-side [data-icon]:not([data-icon *= 'default']):not([data-icon = 'down']) {
+                    background-image: none i
+                    visibility: hidden i
+                }
+            }
+           
+            // Main pane (Chat)
+            #main {
+                /// Header.
+                > header > div:nth-child(2) {
+                    /// Contact name.
+                    [dir][title] {
+                        max-width: 100px
+                        rad: 4px
+                        c: t 0 sk
+                    }
+                    /// Online status.
+                    [title]:not([dir]) {
+                        margin-top: 4px i
+                        max-width: 50px
+                        rad: 4px
+                        c: t 0 sk
+                    }
+                }
+                /// Timestamps.
+                if (timestamps) {
+                    /// Timestamps.
+                    ._18lLQ {
+                        max-width: 30px
+                        rad: 4px i
+                        c: t 0 sk
+                    }
+                }
+                /// Content.
+                [class *= 'text']:not([contenteditable]) span {
+                    /// Exclude icons/whitespace.
+                    &:not([data-icon]) {
+                        overflow: none
+                        text-overflow: unset
+                        rad: 4px
+                        c: t 0 sk
+                        * { c: t }
+                    }
+                }
+                /// Media, stickers and links media.
+                [src *= 'blob'], [src *= 'data'], [style *= 'url('] {
+                    opacity: 0.5 i
+                    filter: blur(32px) brightness(0.8) i
+                }
+                /// documents, contacts name.
+                .h3p5g > span, ._3Nkcb {
+                    max-height: 21px
+                    max-width: 128px
+                    rad: 4px
+                    c: t 0 sk
+                }
+                /// Big emojis (cases 1, 2, 3).
+                img[src *= '/img/'] { opacity: 0 i }
+                
+                /// Groups
+                
+                /// System messages from unsaved contacts.
+                ._1E1g0 { text-shadow: none i }
+                /// Nicknames.
+                [class *= ' color-'] > span {
+                    filter: unset i
+                    rad: 4px
+                    c: t 0 sk
+                }
+                
+                /// Feat -> Fixes for RTL message header. @upstream
+                if (rtl_header) {
+                    /// Fix whitespace for RTL messages.
+                    .selectable-text.invisible-space[dir = 'rtl'],
+                    /// Some links have TWO empty headers.
+                    a.selectable-text[href],
+                    /// Embedded links are special snowflakes, too.
+                    .eRacY[dir = 'ltr'] > [dir = 'ltr'] {
+                        &::before { content: unset i }
+                    }
+                }
+            }
+            
+            /// Right pane.
+            ._14VS3 {
+                /// Name/members/description.
+                [class *= 'text'] {
+                    rad: 4px
+                    c: t 0 sk
+                    
+                    /// Contact phone number
+                    ._1X4JR { c: t }
+                }
+                /// Media.
+                .VRX6A > div {
+                    overflow: hidden i
+                    > div:nth-child(2) {
+                        filter: blur(32px) brightness(0.8) i
+                    }
+                }
+                /// About, participants, groups in common.
+                ._1Mq-e {
+                    [dir], span[title] {
+                        max-width: 250px
+                        rad: 4px
+                        c: t 0 sk
+                    }
+                }
+                /// Emojis.
+                .emoji { visibility: hidden i }
+            }
+        }
+    }
+}
