@@ -2,16 +2,11 @@
 Shows a skeleton screen which is a version of the UI that mimics the page’s layout by showing its elements in a shape similar to the actual content. Great for screenshots.
 Serves as a companion style for [Dark WhatsApp](https://github.com/vednoc/dark-whatsapp) ![external](https://user-images.githubusercontent.com/136959/44433186-de548e80-a56a-11e8-8947-d3331bd6d7a1.png)
 
-[badge]: https://img.shields.io/github/v/tag/E-RELevant/whatsapp-web-skeleton.svg?label=version&style=flat
-[style]: https://github.com/E-RELevant/whatsapp-web-skeleton/commits/master
-[badge]: https://img.shields.io/github/stars/E-RELevant/whatsapp-web-skeleton.svg?style=flat
-[style]: https://github.com/E-RELevant/whatsapp-web-skeleton/stargazers
-[badge]: https://img.shields.io/github/forks/E-RELevant/whatsapp-web-skeleton.svg?color=007ec6&style=flat
-[style]: https://github.com/E-RELevant/WhatsApp-Web-Skeleton/network/members
-[badge]: https://img.shields.io/badge/docs-on%20GitHub-007ec6.svg?&style=flat
-[style]: https://github.com/E-RELevant/whatsapp-web-skeleton/wiki
-[badge]: https://img.shields.io/badge/Install%20directly%20with-Stylus-006666.svg?longCache=true&style=flat
-[style]: https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/wa-sk.user.styl
+[![Version](https://img.shields.io/github/v/tag/E-RELevant/whatsapp-web-skeleton.svg?label=version&style=flat)](https://github.com/E-RELevant/whatsapp-web-skeleton/commits/master)
+[![Stars](https://img.shields.io/github/stars/E-RELevant/whatsapp-web-skeleton.svg?style=flat)](https://github.com/E-RELevant/whatsapp-web-skeleton/stargazers)
+[![Forks](https://img.shields.io/github/forks/E-RELevant/whatsapp-web-skeleton.svg?color=007ec6&style=flat)](https://github.com/E-RELevant/WhatsApp-Web-Skeleton/network/members)
+[![docs](https://img.shields.io/badge/docs-on%20GitHub-007ec6.svg?&style=flat)](https://github.com/E-RELevant/whatsapp-web-skeleton/wiki)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-006666.svg?longCache=true&style=flat)](https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/wa-sk.user.styl)
 
 ![preview](https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/images/preview.png)
 
@@ -29,6 +24,8 @@ First, you need [Stylus](https://add0n.com/stylus.html) UserStyle manager that s
 - [Opera](https://addons.opera.com/extensions/details/stylus/) ![external](https://user-images.githubusercontent.com/136959/44433186-de548e80-a56a-11e8-8947-d3331bd6d7a1.png)
 
 Then, to install the WhatsApp Web Skeleton UserStyle, click on the button below:
+
+[![Install directly with Stylus][badge]][style]
 
 [badge]: https://img.shields.io/badge/Install%20directly%20with-Stylus-006666.svg?longCache=true&style=flat
 [style]: https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/wa-sk.user.styl
