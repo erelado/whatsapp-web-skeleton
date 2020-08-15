@@ -1,7 +1,10 @@
 /* ==UserStyle==
 @name         Dark-WhatsApp Skeleton
 @description  Shows a skeleton screen which is a version of the UI that mimics the page's layout by showing its elements in a shape similar to the actual content.
-@namespace    Screenshot-mode
+@namespace    Skeleton-mode
+@homepageURL  https://github.com/E-RELevant/WhatsApp-Web-Skeleton
+@supportURL   https://github.com/E-RELevant/WhatsApp-Web-Skeleton/issues
+@updateURL    https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/wa-sk.user.styl
 @author       vednoc     <vednoc@pm.me> (https://github.com/vednoc)
 @author       E-RELevant                (https://github.com/E-RELevant)
 @version      1.0.0
@@ -12,7 +15,6 @@
 @var color    bg_color   'Skeleton background color' #d9d9d9
 @var checkbox timestamps 'Hide timestamps' 1
 @var checkbox rtl_header 'RTL: Remove empty message header' 1
-
 ==/UserStyle== */
 
 // Color mixin.
@@ -33,11 +35,10 @@ rad() { border-radius: arguments }
         sk = lighten(bg_color, 8%)
         t  = transparent
         i  = !important
-        
+
         html[class][dir]:not(x):not(y):not(z) > body[class] > #app {
             /// Hide avatars.
             [style *= 'height'][style *= 'width'] > img[src] { opacity: 0 i }
-                
             /// Left pane.
             #side {
                 /// Titles.
@@ -57,8 +58,7 @@ rad() { border-radius: arguments }
                         c: t 0 sk
                     }
                 }
-                
-                /// Timestamps.
+                /// /// Feat -> Timestamps.
                 if (timestamps) {
                     ._3dtfX > .m61XR {
                         max-width: 30px
@@ -74,7 +74,7 @@ rad() { border-radius: arguments }
                     visibility: hidden i
                 }
             }
-           
+
             // Main pane (Chat)
             #main {
                 /// Header.
@@ -93,7 +93,7 @@ rad() { border-radius: arguments }
                         c: t 0 sk
                     }
                 }
-                /// Timestamps.
+                /// /// Feat -> Timestamps.
                 if (timestamps) {
                     /// Timestamps.
                     ._18lLQ {
@@ -138,7 +138,6 @@ rad() { border-radius: arguments }
                     rad: 4px
                     c: t 0 sk
                 }
-                
                 /// Feat -> Fixes for RTL message header. @upstream
                 if (rtl_header) {
                     /// Fix whitespace for RTL messages.
@@ -151,7 +150,7 @@ rad() { border-radius: arguments }
                     }
                 }
             }
-            
+
             /// Right pane.
             ._14VS3 {
                 /// Name/members/description.
