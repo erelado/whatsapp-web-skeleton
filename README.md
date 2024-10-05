@@ -1,4 +1,9 @@
+## 📦 Archived Project
+
+This project has been **archived** and is no longer maintained. Feel free to explore the code, but note that no updates or support will be provided. 
+
 # WhatsApp Web Skeleton
+
 Shows a skeleton screen which is a version of the UI that mimics the page’s layout by showing its elements in a shape similar to the actual content. Great for screenshots.
 Serves as a companion style for [Dark WhatsApp](https://github.com/vednoc/dark-whatsapp) ![external](https://user-images.githubusercontent.com/136959/44433186-de548e80-a56a-11e8-8947-d3331bd6d7a1.png)
 
@@ -11,6 +16,7 @@ Serves as a companion style for [Dark WhatsApp](https://github.com/vednoc/dark-w
 ![preview](https://raw.githubusercontent.com/E-RELevant/WhatsApp-Web-Skeleton/master/images/preview.png)
 
 ## Features
+
 - Toggle on/off skeleton mode
   - Hides the main chat area, right and left drawers.
 - Set custom skeleton background color.
@@ -18,6 +24,7 @@ Serves as a companion style for [Dark WhatsApp](https://github.com/vednoc/dark-w
 - Remove empty message header for right-to-left syntax.
 
 ## Installation
+
 First, you need [Stylus](https://add0n.com/stylus.html) UserStyle manager that supports installing UserCSS/UserStyle.
 - [Google Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) ![external](https://user-images.githubusercontent.com/136959/44433186-de548e80-a56a-11e8-8947-d3331bd6d7a1.png)
 - [Mozilla Firefox](https://addons.mozilla.org/firefox/addon/styl-us/) ![external](https://user-images.githubusercontent.com/136959/44433186-de548e80-a56a-11e8-8947-d3331bd6d7a1.png)
